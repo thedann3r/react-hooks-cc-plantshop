@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
 function PlantCard({image, name, price, id, plants, setPlants}) {
+  const [inStock, setInStock] = useState(true)
+
+  function handleToggleStock() {
+    setInStock((prevStock) => !prevStock)
+  }
   const [updatePlant,setUpdatePlant] = useState({
     name:"",
     image:"",
@@ -64,11 +69,9 @@ function PlantCard({image, name, price, id, plants, setPlants}) {
         <h4>{name}</h4>
         <p>Price: {price}</p>
         <p>{id}</p>
-        {true ? (
-          <button className="primary">In Stock</button>
-        ) : (
-          <button>Out of Stock</button>
-        )}
+        <button className={inStock ? "primary" : ""} onClick={handleToggleStock}>
+          {inStock ? "In Stock" : "Out of Stock"}
+        </button>
         <form onSubmit={handleUpdate}>
         <input type="text" name="name" placeholder="Plant name" value={updatePlant.name} required onChange={handleChange}/>
         <input type="url" name="image" placeholder="image-url" value={updatePlant.image} required onChange={handleChange}/>
