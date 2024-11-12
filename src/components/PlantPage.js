@@ -13,7 +13,7 @@ function PlantPage() {
     .then(data => {setPlants(data)})
   },[])
    
-   const displayPlant = plants.filter((plante) => `${plants.name}`.toLowerCase().includes(searchPlant.toLowerCase()))
+   const displayPlant = plants.filter((plante) => `${plante.name}`.toLowerCase().includes(searchPlant.toLowerCase()))
 
   return (
     <main>
