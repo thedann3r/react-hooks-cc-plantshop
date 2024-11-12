@@ -47,6 +47,12 @@
       "image": "https://assets-news.housing.com/news/wp-content/uploads/2022/09/27090522/Oxalis-plant1.jpg",
       "price": "1.99",
       "id": 8
+    },
+    {
+      "name": "Aloe vera",
+      "image": "https://images.ctfassets.net/mgaihfszrtka/7p8kC54ROraaIO0iItVBna/b31aacca043a919ec87a9b35b1758413/closeupaloeveraplantoutd_793774.jpg",
+      "price": "12.00",
+      "id": 9
     }
   ]
 }
